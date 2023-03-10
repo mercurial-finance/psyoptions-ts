@@ -1,28 +1,20 @@
 {
-  "name": "@mithraic-labs/psy-american",
+  "name": "@mercurial-finance/psy-american",
   "version": "0.2.3",
   "description": "PsyOptions American style options protocol (anchor)",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**"
   ],
-  "types": "dist/index.d.ts",
   "repository": "https://github.com/mithraiclabs/psyoptions-ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "build:package": "yarn clean && rollup -c",
-    "clean": "rm -rf ./dist",
-    "prepublishOnly": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "type-check": "tsc --noEmit"
+    "build": "tsup"
   },
   "devDependencies": {
-    "@rollup/plugin-json": "^4.1.0",
-    "rollup": "^2.56.3",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "typedoc": "^0.22.4",
+    "tsup": "^6.6.3",
     "typescript": "^4.4.3"
   },
   "dependencies": {
